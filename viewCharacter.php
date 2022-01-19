@@ -64,6 +64,7 @@
         $intMod = $player_character->calculateScoreModifier($intScore);
         $wisMod = $player_character->calculateScoreModifier($wisScore);
         $chaMod = $player_character->calculateScoreModifier($chaScore);
+        $ability = $player_character->firstLevelAbility();
 
         
         echo "<section>";
@@ -114,6 +115,7 @@
         echo "</table>";
         echo "<article class='rollInfo'><p><a href='editcharacter.php?character_id=" . $characterID . "'>Edit</a></p></article>";
         echo "</section>";
+        echo "<article><h4>First Level Ability:</h4><p>" . $ability . "</p></article>";
     }
 
     mysqli_close($dbc);
